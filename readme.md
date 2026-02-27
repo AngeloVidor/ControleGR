@@ -128,7 +128,7 @@ O front-end roda por padrão em:
 ### Transações
 - `POST /api/transacao`
 - `GET /api/transacao/transacoes`
-- `GET /api/transacao/totais`
+- `GET /api/transacao/totais-por-pessoa`
 - `GET /api/transacao/totais-por-categoria`
 
 ## Observações
