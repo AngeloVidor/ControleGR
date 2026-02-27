@@ -95,12 +95,14 @@ public class TransacaoRepository : ITransacaoRepository
 
         var totalReceitas = categorias.Sum(x => x.total_receitas);
         var totalDespesas = categorias.Sum(x => x.total_despesas);
+        var saldoGeral = totalReceitas - totalDespesas;
 
         return new TotaisPorCategoriaResponse
         {
             categorias = categorias,
             total_receitas = totalReceitas,
-            total_despesas = totalDespesas
+            total_despesas = totalDespesas,
+            saldo = saldoGeral
         };
     }
 
