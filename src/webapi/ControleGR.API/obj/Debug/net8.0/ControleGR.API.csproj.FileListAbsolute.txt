@@ -139,3 +139,5 @@ C:\Users\angel\Desktop\Controle-GR\src\webapi\ControleGR.API\obj\Debug\net8.0\Co
 C:\Users\angel\Desktop\Controle-GR\src\webapi\ControleGR.API\obj\Debug\net8.0\ref\ControleGR.API.dll
 C:\Users\angel\Desktop\Controle-GR\src\webapi\ControleGR.API\obj\Debug\net8.0\ControleGR.API.sourcelink.json
 C:\Users\angel\Desktop\Controle-GR\src\webapi\ControleGR.API\obj\Debug\net8.0\Controle.1969B263.Up2Date
+C:\Users\angel\Desktop\Controle-GR\src\webapi\ControleGR.API\bin\Debug\net8.0\ControleGR.API.xml
+C:\Users\angel\Desktop\Controle-GR\src\webapi\ControleGR.API\obj\Debug\net8.0\ControleGR.API.xml

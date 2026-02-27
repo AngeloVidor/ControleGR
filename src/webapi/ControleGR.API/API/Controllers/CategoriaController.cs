@@ -3,6 +3,7 @@ using ControleGR.API.Application.Handlers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleGR.API.API.Controllers;
+
 [ApiController]
 [Route("api/[controller]")]
 public class CategoriaController : ControllerBase
@@ -16,6 +17,9 @@ public class CategoriaController : ControllerBase
         _getCategoriasHandler = getCategoriasHandler;
     }
 
+    /// <summary>
+    /// Cria uma nova categoria no sistema.
+    /// </summary>
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateCategoriaCommand command)
     {
@@ -23,12 +27,13 @@ public class CategoriaController : ControllerBase
         return CreatedAtAction(nameof(Create), new { id }, new { id });
     }
 
+    /// <summary>
+    /// Retorna todas as categorias cadastradas no sistema.
+    /// </summary>
     [HttpGet("categorias")]
     public async Task<IActionResult> GetAll()
     {
         var categorias = await _getCategoriasHandler.Handle();
         return Ok(categorias);
     }
-
-
 }

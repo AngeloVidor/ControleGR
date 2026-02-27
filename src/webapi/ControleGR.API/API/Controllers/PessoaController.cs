@@ -21,14 +21,19 @@ public class PessoasController : ControllerBase
         _deletePessoaHandler = deletePessoaHandler;
     }
 
+    /// <summary>
+    /// Cria uma nova pessoa no sistema.
+    /// </summary>
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreatePessoaCommand command)
     {
         var id = await _handler.Handle(command);
-
         return CreatedAtAction(nameof(Create), new { id }, new { id });
     }
 
+    /// <summary>
+    /// Retorna todas as pessoas cadastradas no sistema.
+    /// </summary>
     [HttpGet("pessoas")]
     public async Task<IActionResult> GetPessoas()
     {
@@ -36,6 +41,9 @@ public class PessoasController : ControllerBase
         return Ok(pessoas);
     }
 
+    /// <summary>
+    /// Atualiza os dados de uma pessoa existente.
+    /// </summary>
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdatePessoa(Guid id, [FromBody] UpdatePessoaCommand command)
     {
@@ -50,6 +58,9 @@ public class PessoasController : ControllerBase
         }
     }
 
+    /// <summary>
+    /// Remove uma pessoa do sistema.
+    /// </summary>
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePessoa(Guid id)
     {

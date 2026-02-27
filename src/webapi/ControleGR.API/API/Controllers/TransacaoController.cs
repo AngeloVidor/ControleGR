@@ -21,6 +21,9 @@ public class TransacaoController : ControllerBase
         _getTransacoesHandler = getTransacoesHandler;
     }
 
+    /// <summary>
+    /// Cria uma nova transação no sistema.
+    /// </summary>
     [HttpPost]
     public async Task<IActionResult> CreateTransacao([FromBody] CreateTransacaoCommand command)
     {
@@ -28,13 +31,19 @@ public class TransacaoController : ControllerBase
         return Ok(transacaoId);
     }
 
-    [HttpGet("totais")]
+    /// <summary>
+    /// Retorna os totais financeiros agrupados por pessoa.
+    /// </summary>
+    [HttpGet("totais-por-pessoa")]
     public async Task<IActionResult> ObterTotais()
     {
         var resultado = await _obterTotaisGeraisHandler.Handle();
         return Ok(resultado);
     }
 
+    /// <summary>
+    /// Retorna os totais financeiros agrupados por categoria.
+    /// </summary>
     [HttpGet("totais-por-categoria")]
     public async Task<IActionResult> ObterTotaisPorCategoria()
     {
@@ -42,6 +51,9 @@ public class TransacaoController : ControllerBase
         return Ok(resultado);
     }
 
+    /// <summary>
+    /// Retorna todas as transações cadastradas no sistema.
+    /// </summary>
     [HttpGet("transacoes")]
     public async Task<IActionResult> ObterTransacoes()
     {

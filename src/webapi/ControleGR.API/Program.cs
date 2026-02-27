@@ -1,3 +1,4 @@
+using System.Reflection;
 using ControleGR.API.Application.Handlers;
 using ControleGR.API.Domain.Interfaces;
 using ControleGR.API.Infrastructure.Data;
@@ -9,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/
 builder.Services.AddControllers();
+
+//CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactCorsPolicy", policy =>
@@ -18,9 +21,17 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
+//Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    options.IncludeXmlComments(xmlPath);
+});
+
+//DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -54,9 +65,10 @@ if (app.Environment.IsDevelopment())
 
     });
 }
-
+//Middlewares
 app.UseHttpsRedirection();
 app.UseCors("ReactCorsPolicy");
+
 app.MapControllers();
 
 app.Run();

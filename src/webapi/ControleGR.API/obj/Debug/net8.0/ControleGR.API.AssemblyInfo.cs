@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleGR.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8f13f66f31b7ef7831e2b0c153b08dac9112a96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d259ddca70e0ee848791447eb0b91a794c0d4888")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleGR.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleGR.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

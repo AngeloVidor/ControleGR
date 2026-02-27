@@ -18,7 +18,7 @@ export const useTransacoes = () => {
 
   const fetchTotais = async () => {
     try {
-      const res = await api.get<Totais>("/Transacao/totais");
+      const res = await api.get<Totais>("/Transacao/totais-por-pessoa");
       setTotais(res.data);
     } catch (err) {
       console.error("Erro ao buscar totais:", err);

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ControleGR.API</name>
+    </assembly>
+    <members>
+        <member name="M:ControleGR.API.API.Controllers.CategoriaController.Create(ControleGR.API.Application.Commands.CreateCategoriaCommand)">
+            <summary>
+            Cria uma nova categoria no sistema.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.API.Controllers.CategoriaController.GetAll">
+            <summary>
+            Retorna todas as categorias cadastradas no sistema.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.API.Controllers.TransacaoController.CreateTransacao(ControleGR.API.Application.Commands.CreateTransacaoCommand)">
+            <summary>
+            Cria uma nova transação no sistema.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.API.Controllers.TransacaoController.ObterTotais">
+            <summary>
+            Retorna os totais financeiros agrupados por pessoa.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.API.Controllers.TransacaoController.ObterTotaisPorCategoria">
+            <summary>
+            Retorna os totais financeiros agrupados por categoria.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.API.Controllers.TransacaoController.ObterTransacoes">
+            <summary>
+            Retorna todas as transações cadastradas no sistema.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.Controllers.PessoasController.Create(ControleGR.API.Application.Commands.CreatePessoaCommand)">
+            <summary>
+            Cria uma nova pessoa no sistema.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.Controllers.PessoasController.GetPessoas">
+            <summary>
+            Retorna todas as pessoas cadastradas no sistema.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.Controllers.PessoasController.UpdatePessoa(System.Guid,ControleGR.API.Application.Commands.UpdatePessoaCommand)">
+            <summary>
+            Atualiza os dados de uma pessoa existente.
+            </summary>
+        </member>
+        <member name="M:ControleGR.API.Controllers.PessoasController.DeletePessoa(System.Guid)">
+            <summary>
+            Remove uma pessoa do sistema.
+            </summary>
+        </member>
+        <member name="T:ControleGR.API.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ControleGR.API.Migrations.Categoria">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.Categoria.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.Categoria.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.Categoria.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ControleGR.API.Migrations.FinalidadeEnumToString">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.FinalidadeEnumToString.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.FinalidadeEnumToString.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.FinalidadeEnumToString.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ControleGR.API.Migrations.Transacao">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.Transacao.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.Transacao.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.Transacao.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ControleGR.API.Migrations.TipoTransacao">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.TipoTransacao.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.TipoTransacao.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.TipoTransacao.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ControleGR.API.Migrations.AjusteRelacionamentoPessoa">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.AjusteRelacionamentoPessoa.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.AjusteRelacionamentoPessoa.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ControleGR.API.Migrations.AjusteRelacionamentoPessoa.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
